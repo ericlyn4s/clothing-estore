@@ -46,6 +46,11 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
+  /* req.body should look like this...
+    {
+      tag_name: "white shoes"
+    }
+  */
     const tagData = await Tag.update(req.body, {
     where: {
       id: req.params.id,
@@ -63,7 +68,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-
+    // if no category data exists, return an error message
     if (!tagData) {
       res.status(404).json({ message: 'No tag found with that id!' });
       return;

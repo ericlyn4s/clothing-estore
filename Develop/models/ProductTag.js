@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
 
+// Initialize ProductTag category model with id, product_id and tag_id fields
 ProductTag.init(
   {
     id: {
@@ -36,4 +37,5 @@ ProductTag.init(
   }
 );
 
+// Export ProductTag model to be used in routes
 module.exports = ProductTag;

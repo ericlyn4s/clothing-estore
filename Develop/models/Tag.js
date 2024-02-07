@@ -4,6 +4,7 @@ const sequelize = require('../config/connection.js');
 
 class Tag extends Model {}
 
+// Initialize tag model with id and tag_name fields
 Tag.init(
   {
     id: {
@@ -25,4 +26,5 @@ Tag.init(
   }
 );
 
+// Export tag model to be used in routes
 module.exports = Tag;

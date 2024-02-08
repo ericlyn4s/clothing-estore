@@ -14,6 +14,8 @@ https://github.com/ericlyn4s/clothing-estore
 
 A walkthrough video of this application can be viewed here:
 
+https://www.youtube.com/watch?v=U2xX3FmOVfo
+
 After forking the data, setup the .env file, install the necessary packages, seed the data and boot up the server as such:
 
 1. `npm install dotenv`
@@ -27,9 +29,15 @@ The database should be correctly seeded and the server will be running at localh
 
 1. GET all categories `http://localhost:3001/api/categories/`
 2. GET one category `http://localhost:3001/api/categories/:id`
-3. POST a new category `http://localhost:3001/api/categories/` - followed by new category ID number in route
+3. POST a new category `http://localhost:3001/api/categories/` - followed by new category information as a JSON request:
 
-4. PUT a change onto an existing category `http://localhost:3001/api/categories/`- followed by new category information as a JSON request:
+```
+{
+    category_name: "Sunglasses"
+}
+```
+
+4. PUT a change onto an existing category `http://localhost:3001/api/categories/:id`- followed by adjusted category information as a JSON request:
 
 ```
 {
@@ -43,8 +51,18 @@ The database should be correctly seeded and the server will be running at localh
 
 6. GET all products `http://localhost:3001/api/products/`
 7. GET one product `http://localhost:3001/api/products/:id`
-8. POST a new product `http://localhost:3001/api/products/` - followed by new product ID number in route 
-9. PUT a change onto an existing product `http://localhost:3001/api/products/` - followed by new product information as a JSON request:
+8. POST a new product `http://localhost:3001/api/products/` - followed by new product information as a JSON request:
+
+```
+{
+      product_name: "Basketball",
+      price: 200.00,
+      stock: 3,
+      tagIds: [1, 2, 3, 4]
+}
+```
+
+9. PUT a change onto an existing product `http://localhost:3001/api/products/:id` - followed by adjusted product information as a JSON request:
 
 ```
 {
@@ -61,8 +79,15 @@ The database should be correctly seeded and the server will be running at localh
 
 11. GET all tags `http://localhost:3001/api/tags/`
 12. GET one tags `http://localhost:3001/api/tags/:id`
-13. POST a new tag `http://localhost:3001/api/tags/` - followed by new tag ID number in route
-14. PUT a change onto an existing tag `http://localhost:3001/api/tags/` - followed by new information as a JSON request:
+13. POST a new tag `http://localhost:3001/api/tags/` - followed by new information as a JSON request:
+
+```
+{
+    tag_name: "white shoes"
+}
+```
+
+14. PUT a change onto an existing tag `http://localhost:3001/api/tags/:id` - followed by adjusted information as a JSON request:
 
 ```
 {
@@ -71,6 +96,8 @@ The database should be correctly seeded and the server will be running at localh
 ```
 
 15. DELETE a tag `http://localhost:3001/api/products/:id`
+
+<image src="assets/example_category_call.png" alt="Example call within Insomnia to the Category table." width="650"/>
 
 ## Credits
 

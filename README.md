@@ -12,9 +12,10 @@ https://github.com/ericlyn4s/clothing-estore
 
 ## Usage
 
-A walkthrough video of this application can be viewed here:
+Two walkthrough videos of this application can be viewed below:
 
-https://www.youtube.com/watch?v=U2xX3FmOVfo
+[Part 1: Models and seeding data into the database](https://www.youtube.com/watch?v=uJV85eveT4U) \
+[Part 2: Running the server and executing CRUD operations](https://www.youtube.com/watch?v=U2xX3FmOVfo)
 
 After forking the data, setup the .env file, install the necessary packages, seed the data and boot up the server as such:
 
